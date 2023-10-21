@@ -2,6 +2,7 @@ package com.walletpro.walletproapi.model;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.sql.Timestamp;
 import java.util.Date;
 
 
@@ -26,43 +27,10 @@ public class CreditCard {
     private String name;
 
     @Column
-    private double groceryPercentage;
+    private Timestamp createdAt;
 
     @Column
-    private double travelPercentage;
-
-    @Column
-    private double diningPercentage;
-
-    @Column
-    private double entertainmentPercentage;
-
-    @Column
-    private int groceryPointsMultipler;
-
-    @Column
-    private int travelPointsMultipler;
-
-    @Column
-    private int diningPointsMultipler;
-
-    @Column
-    private int entertainmentPointsMultipler;
-
-    @Column
-    private String lastFourDigits;
-
-    @Column
-    private Date expiryDate;
-
-    @Column
-    private int creditLimit;
-
-    @Column
-    private Date createdAt;
-
-    @Column
-    private Date updatedAt;
+    private Timestamp updatedAt;
 
     @Column
     private String rewardType;
@@ -70,10 +38,5 @@ public class CreditCard {
     @Column
     private int annualFee;
 
-    @Column
-    private int paymentSchedule = 30;
-
-    @Column
-    private boolean favorite = true;
 
 }
